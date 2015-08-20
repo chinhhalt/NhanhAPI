@@ -18,8 +18,8 @@ $response = $service->sendRequest(NhanhService::URI_CUSTOMER_SEARCH, $data);
 
 if($response->code) {
 	echo "<h1>Success!</h1>";
-	$products = (array)$response->data->customers;
-	foreach($products as $customer) {
+	$customers = (array)$response->data->customers;
+	foreach($customers as $customer) {
 	   echo '<pre>';
 	   var_dump($customer);
 	   echo '</pre>';
