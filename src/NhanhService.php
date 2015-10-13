@@ -185,7 +185,7 @@ class NhanhService
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_TIMEOUT, 10);
         curl_setopt($curl, CURLOPT_CAINFO, './cacert.pem');
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+//         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         $curlResult = curl_exec($curl);
 
         if (curl_error($curl) == "") {
