@@ -33,7 +33,7 @@ class NhanhService
      * @var string
      */
     protected $server = "http://dev.nhanh.vn";
-//     protected $server = "https://nhanh.vn";
+//     protected $server = "https://graph.nhanh.vn";
 
     /**
      * merchantId
