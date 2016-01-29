@@ -15,6 +15,7 @@ class NhanhService
     const URI_GET_PRODUCT       = '/api/product/detail';
     const URI_ADD_PRODUCT       = '/api/product/add';
     const URI_SHIPPING_FEE      = '/api/shipping/fee';
+    const URI_SHIPPING_MULTIFEE = '/api/shipping/multifee';
     const URI_SHIPPING_CARRIER  = '/api/shipping/carrier';
     const URI_ORDER_ADD         = '/api/order/add';
     const URI_ORDER_UPDATE      = '/api/order/update';
