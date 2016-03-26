@@ -29,7 +29,7 @@ class NhanhService
     /**
      * the server address.
      * testing: http://dev.nhanh.vn
-     * production: https://nhanh.vn
+     * production: https://graph.nhanh.vn
      *
      * @var string
      */
