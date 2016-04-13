@@ -5,35 +5,35 @@ header('Content-type: text/html; charset=utf-8');
 require_once '../src/NhanhService.php';
 
 $data = array(
-	"id" => 8935432,
-	"trafficSource" => null,
+    "id" => 8935432,
+    "trafficSource" => null,
     "accessDevice" => null,
-	"depotId" => null,
-	"status" => "New", // New | Confirmed
-	"moneyTransfer" => null,
+    "depotId" => null,
+    "status" => "New", // New | Confirmed
+    "moneyTransfer" => null,
     "paymentId" => null,
-	"paymentMethod" => null,
-	"paymentGateway" => null,
-	"paymentCode" => null,
-	"carrierId" => 2, // carrierId get from get/shippingFee.php
-	"carrierServiceId" => 23, // carrierServiceId get from get/shippingFee.php
-	"codFee" => 15000,
-	"shipFeeBy" => "Sender", // Receiver
-	"shipFee" => 23000,
-	"customerShipFee" => 38000,
-	"deliveryDate" => "2015-05-30",
-	"description" => "Giao hàng trong giờ hành chính",
-	"autoSend" => null,
-	"fromName" => null,
-	"fromEmail" => null,
-	"fromAddress" => null,
-	"fromMobile" => null,
-	"fromCityName" => null,
-	"fromDistrictName" => null,
-	"weight" => 900, // in gram
-	"width" => null,
-	"height" => null,
-	"length" => null,
+    "paymentMethod" => null,
+    "paymentGateway" => null,
+    "paymentCode" => null,
+    "carrierId" => 2, // carrierId get from get/shippingFee.php
+    "carrierServiceId" => 23, // carrierServiceId get from get/shippingFee.php
+    "codFee" => 15000,
+    "shipFeeBy" => "Sender", // Receiver
+    "shipFee" => 23000,
+    "customerShipFee" => 38000,
+    "deliveryDate" => "2015-05-30",
+    "description" => "Giao hàng trong giờ hành chính",
+    "autoSend" => null,
+    "fromName" => null,
+    "fromEmail" => null,
+    "fromAddress" => null,
+    "fromMobile" => null,
+    "fromCityName" => null,
+    "fromDistrictName" => null,
+    "weight" => 900, // in gram
+    "width" => null,
+    "height" => null,
+    "length" => null,
     "createdDateTime" => "2015-05-27 09:35:52",
     "customerName" => "Lucia",
     "customerMobile" => "0988666999",
@@ -73,11 +73,11 @@ $storeId = null;
 $service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_ORDER_ADD, $data, $storeId);
 
-if($response->code) {
-	echo "<h1>Success!</h1>";
+if ($response->code) {
+    echo "<h1>Success!</h1>";
 } else {
-	echo "<h1>Failed!</h1>";
-	foreach ($response->messages as $message) {
-		echo "<p>$message</p>";
-	}
+    echo "<h1>Failed!</h1>";
+    foreach ($response->messages as $message) {
+        echo "<p>$message</p>";
+    }
 }
