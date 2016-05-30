@@ -33,15 +33,8 @@ class NhanhService
      *
      * @var string
      */
-    protected $server = "http://dev.nhanh.vn";
+    protected $server = "http://vanck.dev.nhanh.vn";
 //     protected $server = "https://graph.nhanh.vn";
-
-    /**
-     * merchantId
-     *
-     * @var string
-     */
-    protected $merchantId = "_YOUR_MERCHANT_ID_";
 
     /**
      * apiUsername
@@ -73,24 +66,6 @@ class NhanhService
     public function setServer($server)
     {
         $this->server = $server;
-    }
-
-    /**
-     *
-     * @return the $merchantId
-     */
-    public function getMerchantId()
-    {
-        return $this->merchantId;
-    }
-
-    /**
-     *
-     * @param string $merchantId
-     */
-    public function setMerchantId($merchantId)
-    {
-        $this->merchantId = $merchantId;
     }
 
     /**
@@ -173,7 +148,6 @@ class NhanhService
         }
         $postFields = array(
             "version" => self::SERVICE_VERSION,
-            "merchantId" => $this->getMerchantId(),
             "apiUsername" => $this->getApiUsername(),
             "storeId" => $storeId,
             "data" => $dataString,
@@ -185,8 +159,8 @@ class NhanhService
         curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_TIMEOUT, 10);
-        curl_setopt($curl, CURLOPT_CAINFO, './cacert.pem');
-//         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+//         curl_setopt($curl, CURLOPT_CAINFO, './cacert.pem');
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         $curlResult = curl_exec($curl);
 
         if (curl_error($curl) == "") {
