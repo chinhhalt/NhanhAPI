@@ -17,9 +17,11 @@ class NhanhService
     const URI_SHIPPING_FEE      = '/api/shipping/fee';
     const URI_SHIPPING_MULTIFEE = '/api/shipping/multifee';
     const URI_SHIPPING_CARRIER  = '/api/shipping/carrier';
+    const URI_SHIPPING_LOCATION  = '/api/shipping/location';
     const URI_ORDER_ADD         = '/api/order/add';
     const URI_ORDER_UPDATE      = '/api/order/update';
     const URI_CUSTOMER_SEARCH   = '/api/customer/search';
+    const URI_BILL_SEARCH       = '/api/bill/search';
 
     /**
      * The server will use this parameter to process your request
@@ -102,6 +104,11 @@ class NhanhService
     public function setSecretKey($secretKey)
     {
         $this->secretKey = $secretKey;
+    }
+
+    public function printApiInfo()
+    {
+        return 'server: '. $this->getServer() . '<br>apiUsername: '. $this->getApiUsername();
     }
 
     /**
