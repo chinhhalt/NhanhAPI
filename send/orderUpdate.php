@@ -8,17 +8,16 @@ header('Content-type: text/html; charset=utf-8');
 require_once '../src/NhanhService.php';
 
 $data = array(
-    "id" => 8935432,
-    "paymentId" => "27937BK7164",
+    "id" => 89354328,
     "paymentCode" => "308AU130",
     "paymentGateway" => "Bảo Kim",
     "moneyTransfer" => 12000000,
-    "status" => "Canceled", // or: Confirmed | Aborted
+    "status" => "Canceled", // or: Canceled | Aborted
     "reasonDescription" => "Description about cancel reason"
 );
 
 // the storeId in e-commerce platforms, individual websites set $storeId = null;
-$storeId = 2335458;
+$storeId = 2166285;
 
 $service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_ORDER_UPDATE, $data, $storeId);

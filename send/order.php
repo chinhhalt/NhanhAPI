@@ -5,31 +5,30 @@ header('Content-type: text/html; charset=utf-8');
 require_once '../src/NhanhService.php';
 
 $data = array(
-    "id" => 8935432,
+    "id" => 89354328,
     "trafficSource" => null,
     "accessDevice" => null,
     "depotId" => null,
     "status" => "New", // New | Confirmed
     "moneyTransfer" => null,
-    "paymentId" => null,
     "paymentMethod" => null,
     "paymentGateway" => null,
     "paymentCode" => null,
-    "carrierId" => 2, // carrierId get from get/shippingFee.php
-    "carrierServiceId" => 23, // carrierServiceId get from get/shippingFee.php
+    "carrierId" => 9, // carrierId get from get/shippingFee.php
+    "carrierServiceId" => 33, // carrierServiceId get from get/shippingFee.php
     "codFee" => 15000,
     "shipFeeBy" => "Sender", // Receiver
-    "shipFee" => 23000,
+    "shipFee" => 21000,
     "customerShipFee" => 38000,
-    "deliveryDate" => date('Y-m-d'),
+//     "deliveryDate" => date('Y-m-d'),
     "description" => "Giao hàng trong giờ hành chính",
-    "autoSend" => null,
+    "autoSend" => 1,
     "fromName" => null,
     "fromEmail" => null,
     "fromAddress" => null,
     "fromMobile" => null,
-    "fromCityName" => null,
-    "fromDistrictName" => null,
+    "fromCityName" => "Hà Nội",
+    "fromDistrictName" => "Quận Hai Bà Trưng",
     "weight" => 900, // in gram
     "width" => null,
     "height" => null,
@@ -67,7 +66,7 @@ $data = array(
 );
 
 // the storeId in e-commerce platforms, individual websites set $storeId = null;
-// $storeId = 2335458;
+// $storeId = 3954509;
 $storeId = null;
 
 $service = new NhanhService();
