@@ -11,6 +11,8 @@ require_once '../src/NhanhService.php';
 $service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_SHIPPING_CARRIER);
 
+echo $service->printApiInfo() . '<br>';
+
 if($response->code) {
 	echo "<h1>Success!</h1>";
 	echo "<table border='1' cellspacing='0' cellpadding='0'>";

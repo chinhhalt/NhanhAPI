@@ -11,16 +11,20 @@ require_once '../src/NhanhService.php';
 $data = array(
     "fromCityName" => "TP. HCM",
     "fromDistrictName" => "Quận 3",
-    "toCityName" => "Hà nội",
-    "shippingWeight" => 3000, // 3000 gr = 3 kg
-    "toDistrictName" => "Hoàn Kiếm",
+    "toCityName" => "Hà Nội",
+    "toDistrictName" => "Quận Long Biên",
+    "shippingWeight" => 1000, // 1000 gr = 1 kg
     "codMoney" => 4950000
 );
 $service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_SHIPPING_FEE, $data);
 
+echo $service->printApiInfo() . '<br>';
+
 if($response->code) {
 	echo "<h1>Success!</h1>";
+	echo $data['fromCityName'] . ' - ' . $data['fromDistrictName'] . ' => ' . $data['toCityName'] . ' - '. $data['toDistrictName'] . '<br>';
+	echo 'shippingWeight: '. $data['shippingWeight'] .' | codMoney: '. $data['codMoney'] . '<br><br>';
 	echo "<table border='1' cellspacing='0' cellpadding='5'>";
 	echo "<tr>";
 	echo "<th>Carrier ID</th>";

@@ -13,10 +13,11 @@ require_once '../src/NhanhService.php';
 $service = new NhanhService();
 
 // the storeId on e-commerce platforms, individual websites set $storeId = null;
-$storeId = 969003;
+$storeId = null;
+
 // If the product was synchronized from Nhanh.vn, the merchant website must save the idNhanh
 // for each product in merchant website and use this id to get more information from Nhanh.vn
-$nhanhProductId = 272038;
+$nhanhProductId = 1370523;
 
 $response = $service->sendRequest(NhanhService::URI_GET_PRODUCT, $nhanhProductId, $storeId);
 
