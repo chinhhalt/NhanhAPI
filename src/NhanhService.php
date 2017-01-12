@@ -11,17 +11,19 @@
 class NhanhService
 {
 
-    const URI_STORE_ADD         = '/api/store/add';
-    const URI_GET_PRODUCT       = '/api/product/detail';
-    const URI_ADD_PRODUCT       = '/api/product/add';
-    const URI_SHIPPING_FEE      = '/api/shipping/fee';
-    const URI_SHIPPING_MULTIFEE = '/api/shipping/multifee';
-    const URI_SHIPPING_CARRIER  = '/api/shipping/carrier';
-    const URI_SHIPPING_LOCATION  = '/api/shipping/location';
-    const URI_ORDER_ADD         = '/api/order/add';
-    const URI_ORDER_UPDATE      = '/api/order/update';
-    const URI_CUSTOMER_SEARCH   = '/api/customer/search';
-    const URI_BILL_SEARCH       = '/api/bill/search';
+    const URI_STORE_ADD             = '/api/store/add';
+    const URI_GET_PRODUCT_SEARCH    = '/api/product/search';
+    const URI_GET_PRODUCT           = '/api/product/detail';
+    const URI_GET_PRODUCT_CATEGORY  = '/api/product/category';
+    const URI_ADD_PRODUCT           = '/api/product/add';
+    const URI_SHIPPING_FEE          = '/api/shipping/fee';
+    const URI_SHIPPING_MULTIFEE     = '/api/shipping/multifee';
+    const URI_SHIPPING_CARRIER      = '/api/shipping/carrier';
+    const URI_SHIPPING_LOCATION     = '/api/shipping/location';
+    const URI_ORDER_ADD             = '/api/order/add';
+    const URI_ORDER_UPDATE          = '/api/order/update';
+    const URI_CUSTOMER_SEARCH       = '/api/customer/search';
+    const URI_BILL_SEARCH           = '/api/bill/search';
 
     /**
      * The server will use this parameter to process your request
