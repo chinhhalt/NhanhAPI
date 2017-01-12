@@ -15,9 +15,10 @@ $storeId = null;
 
 $response = $service->sendRequest(NhanhService::URI_GET_PRODUCT_CATEGORY, 'productcategory', $storeId);
 
+echo $service->printApiInfo() . '<br>';
+
 if($response->code) {
 	echo "<h1>Success!</h1>";
-	print_r($response->data);
 	var_dump((array)$response->data);
 } else {
 	echo "<h1>Failed!</h1>";
