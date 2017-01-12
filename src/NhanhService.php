@@ -37,7 +37,7 @@ class NhanhService
      *
      * @var string
      */
-    protected $server = "http://vanck.dev.nhanh.vn";
+    protected $server = "http://dev.nhanh.vn";
 //     protected $server = "https://graph.nhanh.vn";
 
     /**
