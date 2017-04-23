@@ -20,3 +20,17 @@ e.g. Product “Samsung Galaxy S2” weighs 300gr, The fullbox includes a charge
 - **shipFee**: shipping fee (or transport costs), which are calculated based on the weight of order, pickup address and delivery address.
 
 - **customerShipFee**: is the fee that website display to customer, usually taken by shipFee + codFee. When website has promotion to free shipping fee for customer, you set customerShipFee = 0.
+
+## Register to use Nhanh.vn API
+
+Please contact **chukhanhvan@gmail.com** to get an API account.
+    (or Skype: **chukhanhvan**).
+The register form will be available soon.
+
+An API account includes:
+
+Param | Data type (Max-length) | Description
+------| -----------------------|------------
+apiUsername | string(32) |
+secretKey | string(32) | used to create the checksum
+
