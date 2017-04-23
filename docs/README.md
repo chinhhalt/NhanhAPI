@@ -25,6 +25,7 @@ e.g. Product “Samsung Galaxy S2” weighs 300gr, The fullbox includes a charge
 
 Please contact **chukhanhvan@gmail.com** to get an API account.
     (or Skype: **chukhanhvan**).
+
 The register form will be available soon.
 
 An API account includes:
