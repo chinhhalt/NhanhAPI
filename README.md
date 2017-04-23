@@ -1,3 +1,26 @@
 # NhanhAPI
 API Documentation
 https://docs.google.com/document/d/13buX_nJgxL4ZLOU3JUP-ib1_hnDd_K-PqD9UmD9JUHU
+
+# Overview
+
+## Introduction
+
+Nhanh.vn API provides a set of solutions to synchronize the data of products, orders, inventory between Nhanh.vn and other websites. These solutions are suitable for both small websites as well as e-commerce platforms supporting multiple stores.
+
+Product information can be sent from external websites to Nhanh.vn and vice versa.
+An inventory update will be sent to the merchant website each time the quantity is changed on Nhanh.vn. The merchant website can listen to these inventory updates from Nhanh.vn API to update its stores’ inventory records accordingly, thus prevent orders on out-of-stock items.
+Order information can be sent to Nhanh.vn via the API, so that the store manager can handle the entire process of order confirmation, picking and packing of goods, delivery to customers, payment checking with shipping carriers entirely on Nhanh.vn platform. Nhanh.vn is connected with multiple carriers to support shipping services, including cash-on-delivery (COD) nationwide.
+Each time the order status is changed, Nhanh.vn API can send an order status update back to your website via your configured URL.
+The merchant website can send unconfirmed order information to Nhanh.vn API to calculate the exact shipping fee, so that the website can display the shipping fee each time customers add a product into their shopping cart or during checkout steps.
+
+## Glossaries
+
+- **shippingWeight**: includes the actual weight of the product and the weight of all the accessories as well as packaging. Shipping weight is used to calculate the shipping fee.
+e.g. Product “Samsung Galaxy S2” weighs 300gr, The fullbox includes a charger (30gr), a headphone (10gr) and the packaging box (30gr). Hence the shippingWeight is: 300 + 30 + 10 + 30 = 370 gr.
+
+- **COD**: Cash on delivery (Collect on delivery) is a type of transaction in which payment for a good is made at the time of delivery. If the purchaser does not make payment when the good is delivered, then the good will be returned to the seller. codFee depending on the amount to collect the order.
+
+- **shipFee**: shipping fee (or transport costs), which are calculated based on the weight of order, pickup address and delivery address.
+
+- **customerShipFee**: is the fee that website display to customer, usually taken by shipFee + codFee. When website has promotion to free shipping fee for customer, you set customerShipFee = 0.
