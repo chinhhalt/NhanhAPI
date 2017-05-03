@@ -30,8 +30,50 @@ The register form will be available soon.
 
 An API account includes:
 
-Param | Data type (Max-length) | Description
-------| -----------------------|------------
+Param |     Data type (Max-length) | Description
+------| -----------------------------|------------
 apiUsername | string(32) |
 secretKey | string(32) | used to create the checksum
+
+# Request, Response
+
+## Environment
+
+- Testing domain: http://dev.nhanh.vn
+- Production domain: https://graph.nhanh.vn
+
+## Request
+
+- RESTful applications use HTTP requests to post data. The POST params include:
+
+Param | Data type (Max-length) | Description
+------| -----------------------|------------
+version | string(10) | The current version is 1.0
+storeId | string(20) | Required if the merchant is an e-commerce platforms that have multiple stores.
+apiUsername | string(32) | 
+data | string | The JSON encoded string of an array (the structure of data array will be explained in detail each request below).
+checksum | string(32) | Each request must have a checksum to validate the data. See How to create the checksum below
+
+## Response
+
+- The response is a JSON encoded string, which decodes into the following:<br>
+{<br>
+		code: 1 | 0, // 1 == success, 0 == failed (has errors)
+        
+		messages: { // if the status == 0 the server will return error messages
+        
+			error code => message 1,
+            
+			error code => message 2
+            
+				...
+},
+
+data: {
+
+	// structure will be explained in detail each request below
+    
+}
+
+
 
